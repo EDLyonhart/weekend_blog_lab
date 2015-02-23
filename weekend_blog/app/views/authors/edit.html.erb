@@ -1,0 +1,31 @@
+<h1>Author Edit</h1>
+
+<% if @author.errors.any?%>
+  <% @author.errors.full_messages.each do |error|%>
+    <p class="text-danger">
+      <%= error %>
+    </p>
+  <% end%>
+<% end %>
+
+<%= @author.first_name %>
+
+<%= form_for @author do |f| %>
+
+  <p>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, autofocus: true %>
+  <br><br>
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  <br><br>
+    <%= f.label :age %>
+    <%= f.text_field :age %>
+  <br><br>
+    <%= f.submit "Save" %>
+  </p>
+<% end %>
+
+<%= link_to "See all posts", author_posts_path(@author) %>
+
+<%= link_to "Destroy", author_path, method: "Delete" %>

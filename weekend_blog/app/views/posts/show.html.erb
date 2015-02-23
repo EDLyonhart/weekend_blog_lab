@@ -1,0 +1,17 @@
+
+
+
+
+<h1><%= @post.title %></h1>
+<br>
+<h3><%= @post.catagory %></h3>
+<br><br>
+<p>
+  <%= @post.body %>
+</p>
+
+<%#@post.to_json %>
+<%= "hi" %>
+<%= link_to "Edit this Post", edit_post_path(@post) %>
+<br>
+<%= link_to "Back to author index", authors_path %>

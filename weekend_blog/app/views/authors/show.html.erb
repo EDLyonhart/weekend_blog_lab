@@ -1,0 +1,13 @@
+<h1>Author Show</h1>
+
+
+Name: <%= @author.first_name %> <%= @author.last_name %>
+<br><br>
+Age: <%= @author.age %>
+<br><br>
+<%= link_to "See Posts", author_posts_path(@author) %>
+<br><br>
+
+<%= link_to "Edit this Author", edit_author_path %>
+<br>
+<%= link_to "Back to Index", authors_path %>

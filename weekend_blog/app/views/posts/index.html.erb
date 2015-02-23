@@ -1,0 +1,16 @@
+<h1><%= @author.first_name %> <%= @author.last_name %>'s Posts Index</h1>
+
+<ul>
+
+  <% @posts.each do |f| %>
+  <li>
+    <h2><%= f.title %></h2> <h4>( <%= f.catagory %> )</h4>
+    <br>
+    <%= f.body %>
+    <%= link_to "Edit this post", edit_post_path(f) %>        <!-- @author is causing issues. here and below -->
+    <br><br><br>
+  </li>
+  <% end %>
+  <br><br>
+  <%= link_to "Write a new post", new_author_post_path(@author) %>
+</ul>
